@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=wmItime
+Name=WmItime
 Comment=Standard and Internet Time clock
 Comment[pl]=Zegar odmierzający czas standardowy oraz internetowy
 Exec=wmitime
