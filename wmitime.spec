@@ -1,8 +1,8 @@
 Summary:	Standard and Internet Time clock applet
 Summary(pl):	Zegar odmierzaj±cy standardowy oraz internetowy czas
 Name:		wmitime
-Version: 	0.2
-Release:	3
+Version: 	0.3
+Release:	1
 Copyright:	GPL
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
@@ -48,6 +48,10 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/%{name}
 
 %changelog
+* Mon May 24 1999 Piotr Czerwiñski <pius@pld.org.pl> 
+  [0.3-1]
+- updated to 0.3.
+
 * Mon May 17 1999 Piotr Czerwiñski <pius@pld.org.pl>
   [0.2-3]
 - package is FHS 2.0 compliant,
