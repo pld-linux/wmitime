@@ -13,6 +13,7 @@ BuildRequires:	xpm-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define 	_prefix		/usr/X11R6
+%define		_applnkdir	%{_datadir}/applnk
 
 %description
 WMitime is an (overglorified) clock for the Windowmaker/Afterstep dock. 
@@ -33,10 +34,10 @@ make -C %{name} \
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},/usr/X11R6/share/applnk/DockApplets}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/DockApplets}
 
 install %{name}/%{name} $RPM_BUILD_ROOT%{_bindir}
-install %{SOURCE1} $RPM_BUILD_ROOT/usr/X11R6/share/applnk/DockApplets
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
 strip $RPM_BUILD_ROOT%{_bindir}/*
 
@@ -49,4 +50,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc {BUGS,CHANGES,README}.gz
 %attr(755,root,root) %{_bindir}/%{name}
-/usr/X11R6/share/applnk/DockApplets/wmitime.desktop
+%{_applnkdir}/DockApplets/wmitime.desktop
