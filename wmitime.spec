@@ -29,7 +29,7 @@ równie¿ nowy internetowy czas Swatcha.
 %build
 
 make -C %{name} \
-	FLAGS="$RPM_OPT_FLAGS"
+	FLAGS="$RPM_OPT_FLAGS -I/usr/X11R6/include"
 
 %install
 rm -rf $RPM_BUILD_ROOT
