@@ -2,11 +2,12 @@ Summary:	Standard and Internet Time clock applet
 Summary(pl):	Zegar odmierzaj±cy standardowy oraz internetowy czas
 Name:		wmitime
 Version: 	0.3
-Release:	1
+Release:	2
 Copyright:	GPL
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
-Source:		http://www.neotokyo.org/illusion/%{name}-%{version}.tar.gz
+Source0:	http://www.neotokyo.org/illusion/%{name}-%{version}.tar.gz
+Source1:	wmitime.desktop
 BuildPrereq:	XFree86-devel
 BuildPrereq:	xpm-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
@@ -24,7 +25,7 @@ Wy¶wietla standardowy 12/24 godzinny czas, datê, jak
 równie¿ nowy internetowy czas Swatcha.
 
 %prep
-%setup -q -n %{name}.app
+%setup -q -n %{name}
 
 %build
 
@@ -34,9 +35,9 @@ make -C %{name} \
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT%{_bindir}
+install -d $RPM_BUILD_ROOT{%{_bindir},/etc/X11/applnk/DockApplets}
 install %{name}/%{name} $RPM_BUILD_ROOT%{_bindir}
-
+install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/applnk/DockApplets
 gzip -9nf BUGS CHANGES README
 
 %clean
@@ -46,6 +47,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc {BUGS,CHANGES,README}.gz
 %attr(755,root,root) %{_bindir}/%{name}
+/etc/X11/applnk/DockApplets/wmitime.desktop
 
 %changelog
 * Mon May 24 1999 Piotr Czerwiñski <pius@pld.org.pl> 
