@@ -2,7 +2,7 @@ Summary:	Standard and Internet Time clock applet
 Summary(pl):	Zegar odmierzaj±cy standardowy oraz internetowy czas
 Name:		wmitime
 Version: 	0.3
-Release:	2
+Release:	3
 Copyright:	GPL
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
@@ -37,6 +37,8 @@ install -d $RPM_BUILD_ROOT{%{_bindir},/etc/X11/applnk/DockApplets}
 
 install %{name}/%{name} $RPM_BUILD_ROOT%{_bindir}
 install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/applnk/DockApplets
+
+strip $RPM_BUILD_ROOT%{_bindir}/*
 
 gzip -9nf BUGS CHANGES README
 
