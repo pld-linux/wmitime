@@ -11,7 +11,6 @@ URL:		http://www.neotokyo.org/illusion/
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define 	_prefix		/usr/X11R6
 
 %description
 WMitime is an (overglorified) clock for the Windowmaker/Afterstep
