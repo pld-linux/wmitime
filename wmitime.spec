@@ -28,7 +28,7 @@ WMitime jest zegarem dla Doku WindowMakera/Afterstepa. Wy¶wietla standardowy
 
 %build
 
-make -C %{name} \
+%{__make} -C %{name} \
 	FLAGS="$RPM_OPT_FLAGS -I/usr/X11R6/include"
 
 %install
