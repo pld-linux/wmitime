@@ -20,9 +20,8 @@ It displays standard 12/24 hour time and date, as well as Swatch's new
 internet time.
 
 %description -l pl
-WMitime jest zegarem dla Doku WindowMakera/Afterstepa.
-Wy¶wietla standardowy 12/24 godzinny czas, datê, jak 
-równie¿ nowy internetowy czas Swatcha.
+WMitime jest zegarem dla Doku WindowMakera/Afterstepa. Wy¶wietla standardowy
+12/24 godzinny czas, datê, jak równie¿ nowy internetowy czas Swatcha.
 
 %prep
 %setup -q -n %{name}
@@ -34,10 +33,11 @@ make -C %{name} \
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT{%{_bindir},/etc/X11/applnk/DockApplets}
+
 install %{name}/%{name} $RPM_BUILD_ROOT%{_bindir}
 install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/applnk/DockApplets
+
 gzip -9nf BUGS CHANGES README
 
 %clean
