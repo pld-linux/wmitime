@@ -46,7 +46,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 * Wed Apr  5 1999 Piotr Czerwiñski <pius@pld.org.pl>
-  [2.1-2]
+  [0.2-2]
 - modified a bit spec file for PLD use.
 
 * Fri Dec 18 1998 Jochem Wichers Hoeth <wiho@chem.uva.nl>
