@@ -2,7 +2,7 @@ Summary:	Standard and Internet Time clock applet
 Summary(pl):	Zegar odmierzaj±cy standardowy oraz internetowy czas
 Name:		wmitime
 Version:	0.3
-Release:	5
+Release:	6
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://www.neotokyo.org/illusion/%{name}-%{version}.tar.gz
@@ -28,7 +28,8 @@ czas Swatcha.
 %build
 LANG=C; export LANG
 %{__make} -C %{name} \
-	FLAGS="%{rpmcflags} -I%{_includedir}"
+	FLAGS="%{rpmcflags} -I%{_includedir}" \
+	LIBDIR="-L/usr/X11R6/%{_lib}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
