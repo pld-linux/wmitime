@@ -6,6 +6,7 @@ Release:	4
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://www.neotokyo.org/illusion/%{name}-%{version}.tar.gz
+# Source0-md5:	7168e9d6b5930d510727530a309d812c
 Source1:	%{name}.desktop
 URL:		http://www.neotokyo.org/illusion/
 BuildRequires:	XFree86-devel
