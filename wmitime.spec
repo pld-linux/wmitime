@@ -2,7 +2,7 @@ Summary:	Standard and Internet Time clock applet
 Summary(pl):	Zegar odmierzaj±cy standardowy oraz internetowy czas
 Name:		wmitime
 Version:	0.3
-Release:	4
+Release:	5
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://www.neotokyo.org/illusion/%{name}-%{version}.tar.gz
@@ -11,7 +11,6 @@ Source1:	%{name}.desktop
 URL:		http://www.neotokyo.org/illusion/
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 WMitime is an (overglorified) clock for the Windowmaker/Afterstep
@@ -33,11 +32,10 @@ LANG=C; export LANG
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/DockApplets}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_desktopdir}/docklets}
 
 install %{name}/%{name} $RPM_BUILD_ROOT%{_bindir}
-#install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
-
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}/docklets
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -46,4 +44,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc BUGS CHANGES README
 %attr(755,root,root) %{_bindir}/%{name}
-#%%{_applnkdir}/DockApplets/wmitime.desktop
+%{_desktopdir}/docklets/wmitime.desktop
