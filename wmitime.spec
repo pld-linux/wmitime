@@ -48,14 +48,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc {BUGS,CHANGES,README}.gz
 %attr(755,root,root) %{_bindir}/%{name}
 /etc/X11/applnk/DockApplets/wmitime.desktop
-
-%changelog
-* Mon May 24 1999 Piotr Czerwiñski <pius@pld.org.pl> 
-  [0.3-1]
-- updated to 0.3.
-
-* Mon May 17 1999 Piotr Czerwiñski <pius@pld.org.pl>
-  [0.2-3]
-- package is FHS 2.0 compliant,
-- rewritten spec file for PLD use,
-- based on spec by Jochem Wichers Hoeth <wiho@chem.uva.nl>.
