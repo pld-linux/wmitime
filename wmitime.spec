@@ -29,7 +29,7 @@ czas Swatcha.
 %setup -q -n %{name}
 
 %build
-
+export LANG=C
 %{__make} -C %{name} \
 	FLAGS="%{rpmcflags} -I%{_includedir}"
 
