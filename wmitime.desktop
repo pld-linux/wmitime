@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=wmitime
+Comment=Standard and Internet Time clock
+Comment[pl]=Zegar odmierzaj±cy standardowy oraz internetowy czas
+Exec=wmitime
+Terminal=0
+Type=Application
