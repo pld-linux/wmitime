@@ -11,7 +11,7 @@ BuildPrereq:	XFree86-devel
 BuildPrereq:	xpm-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
-%define _prefix         /usr/X11R6
+%define _prefix	/usr/X11R6
 
 %description
 WMitime is an (overglorified) clock for the Windowmaker/Afterstep dock. 
@@ -27,8 +27,9 @@ równie¿ nowy internetowy czas Swatcha.
 %setup -q -n %{name}.app
 
 %build
-cd %{name}
-make FLAGS="$RPM_OPT_FLAGS"
+
+make -C %{name} \
+	FLAGS="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -49,12 +50,6 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Mon May 17 1999 Piotr Czerwiñski <pius@pld.org.pl>
   [0.2-3]
-- added using more rpm macros,
-- package is FHS 2.0 compliant.
-
-* Wed Apr  5 1999 Piotr Czerwiñski <pius@pld.org.pl>
-  [0.2-2]
-- modified a bit spec file for PLD use.
-
-* Fri Dec 18 1998 Jochem Wichers Hoeth <wiho@chem.uva.nl>
-- first build.
+- package is FHS 2.0 compliant,
+- rewritten spec file for PLD use,
+- based on spec by Jochem Wichers Hoeth <wiho@chem.uva.nl>.
