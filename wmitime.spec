@@ -33,10 +33,10 @@ make -C %{name} \
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},/etc/X11/applnk/DockApplets}
+install -d $RPM_BUILD_ROOT{%{_bindir},/usr/X11R6/share/applnk/DockApplets}
 
 install %{name}/%{name} $RPM_BUILD_ROOT%{_bindir}
-install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/applnk/DockApplets
+install %{SOURCE1} $RPM_BUILD_ROOT/usr/X11R6/share/applnk/DockApplets
 
 strip $RPM_BUILD_ROOT%{_bindir}/*
 
@@ -49,4 +49,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc {BUGS,CHANGES,README}.gz
 %attr(755,root,root) %{_bindir}/%{name}
-/etc/X11/applnk/DockApplets/wmitime.desktop
+/usr/X11R6/share/applnk/DockApplets/wmitime.desktop
