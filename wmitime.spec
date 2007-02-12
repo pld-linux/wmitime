@@ -1,5 +1,5 @@
 Summary:	Standard and Internet Time clock applet
-Summary(pl.UTF-8):   Zegar odmierzający standardowy oraz internetowy czas
+Summary(pl.UTF-8):	Zegar odmierzający standardowy oraz internetowy czas
 Name:		wmitime
 Version:	0.3
 Release:	6
