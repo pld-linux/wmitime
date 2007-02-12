@@ -1,5 +1,5 @@
 Summary:	Standard and Internet Time clock applet
-Summary(pl):	Zegar odmierzaj±cy standardowy oraz internetowy czas
+Summary(pl.UTF-8):   Zegar odmierzajÄ…cy standardowy oraz internetowy czas
 Name:		wmitime
 Version:	0.3
 Release:	6
@@ -17,9 +17,9 @@ WMitime is an (overglorified) clock for the Windowmaker/Afterstep
 dock. It displays standard 12/24 hour time and date, as well as
 Swatch's new internet time.
 
-%description -l pl
-WMitime jest zegarem dla Doku WindowMakera/Afterstepa. Wy¶wietla
-standardowy 12/24 godzinny czas, datê, jak równie¿ nowy internetowy
+%description -l pl.UTF-8
+WMitime jest zegarem dla Doku WindowMakera/Afterstepa. WyÅ›wietla
+standardowy 12/24 godzinny czas, datÄ™, jak rÃ³wnieÅ¼ nowy internetowy
 czas Swatcha.
 
 %prep
