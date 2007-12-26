@@ -5,7 +5,6 @@ Comment[pl]=Zegar odmierzający czas standardowy oraz internetowy
 Exec=wmitime
 Terminal=false
 Type=Application
-Encoding=UTF-8
 Categories=Applet;
 NotShowIn=GNOME;KDE;
 # vi: encoding=utf-8
